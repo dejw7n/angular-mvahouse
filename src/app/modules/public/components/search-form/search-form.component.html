@@ -1,0 +1,40 @@
+<div class="sf">
+	<div class="sf__group w-full">
+		<div class="sf__group-inner">
+			<div class="sf__group-icon">
+				<fa-icon [icon]="faHandPointer"></fa-icon>
+			</div>
+			<div class="sf__group-display">Filter</div>
+		</div>
+	</div>
+	<div class="sf__group">
+		<div class="dates-picker">
+			<input type="hidden" id="dates-picker-checkin" name="dates-picker" />
+			<input type="hidden" id="dates-picker-checkout" name="dates-picker" />
+			<input id="dates-picker" type="text" name="dates-picker" />
+			<label for="dates-picker" class="flex cursor-pointer">
+				<div class="sf__group-inner">
+					<div class="sf__group-icon">
+						<fa-icon [icon]="faCalendar"></fa-icon>
+					</div>
+					<div class="flex">
+						<div class="flex">
+							<div id="dates-picker-checkin-display" class="sf__group-display">Check-in</div>
+						</div>
+					</div>
+					<div class="sf__dates__divider">
+						<div class="sf__dates__divider-division"></div>
+					</div>
+					<div class="flex">
+						<div id="dates-picker-checkout-display" class="sf__group-display">Check-out</div>
+					</div>
+				</div>
+			</label>
+		</div>
+	</div>
+	<div class="sf__group sf__button">
+		<div class="sf__group-inner">
+			<div class="sf__group-display sf__button-display">Search apartment</div>
+		</div>
+	</div>
+</div>
