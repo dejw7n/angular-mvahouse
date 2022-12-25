@@ -1,8 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 const themeColors = {
 	primary: "#9f7627",
-	secondary: "#35459E",
-	third: "#FF3541",
+	primaryHover: "#644200",
+	secondary: "#bc9b5b",
+	secondaryHover: "#9f7627",
+	third: "#35459E",
 };
 
 module.exports = {
@@ -11,7 +13,9 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: themeColors["primary"],
+				primaryHover: themeColors["primaryHover"],
 				secondary: themeColors["secondary"],
+				secondaryHover: themeColors["secondaryHover"],
 				third: themeColors["third"],
 			},
 		},
