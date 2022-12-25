@@ -15,3 +15,13 @@
 		@apply font-sans;
 	}
 }
+
+@layer components {
+	.responsive-overlay {
+		@apply rounded-md bg-white p-4 shadow-md;
+	}
+}
+
+.wrapper {
+	@apply mx-auto max-w-7xl px-4;
+}

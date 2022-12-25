@@ -1,40 +1,103 @@
 <div class="sf">
-	<div class="sf__group w-full">
-		<div class="sf__group-inner">
-			<div class="sf__group-icon">
-				<fa-icon [icon]="faHandPointer"></fa-icon>
-			</div>
-			<div class="sf__group-display">Filter</div>
-		</div>
-	</div>
 	<div class="sf__group">
-		<div class="dates-picker">
+		<div class="sf__datespicker">
 			<input type="hidden" id="dates-picker-checkin" name="dates-picker" />
 			<input type="hidden" id="dates-picker-checkout" name="dates-picker" />
 			<input id="dates-picker" type="text" name="dates-picker" />
-			<label for="dates-picker" class="flex cursor-pointer">
+			<label for="dates-picker" class="sf__datespicker-label flex cursor-pointer">
 				<div class="sf__group-inner">
 					<div class="sf__group-icon">
 						<fa-icon [icon]="faCalendar"></fa-icon>
 					</div>
-					<div class="flex">
-						<div class="flex">
-							<div id="dates-picker-checkin-display" class="sf__group-display">Check-in</div>
-						</div>
+					<div class="sf__datespicker-display-wrapper flex">
+						<div id="dates-picker-checkin-display" class="sf__datespicker-display">Check-in</div>
 					</div>
-					<div class="sf__dates__divider">
-						<div class="sf__dates__divider-division"></div>
+					<div class="sf__datespicker__divider-wrapper">
+						<div class="sf__datespicker__divider"></div>
 					</div>
-					<div class="flex">
-						<div id="dates-picker-checkout-display" class="sf__group-display">Check-out</div>
+					<div class="sf__datespicker-display-wrapper flex">
+						<div id="dates-picker-checkout-display" class="sf__datespicker-display">Check-out</div>
 					</div>
 				</div>
 			</label>
 		</div>
 	</div>
-	<div class="sf__group sf__button">
-		<div class="sf__group-inner">
-			<div class="sf__group-display sf__button-display">Search apartment</div>
+	<div class="sf__group w-full">
+		<div (click)="toggleStepper()" class="sf__group-wrapper">
+			<div class="sf__group-inner">
+				<div class="sf__group-icon">
+					<fa-icon [icon]="faHandPointer"></fa-icon>
+				</div>
+				<div class="sf__group-display">{{ form.adults }} adults</div>
+				<div class="sf__group-display px-2"><span class="text-3xl leading-none">·</span></div>
+				<div class="sf__group-display">{{ form.childrens }} children</div>
+			</div>
+		</div>
+		<p-overlay [(visible)]="overlayStepperVisible" [responsive]="{ breakpoint: '640px', direction: 'bottom', contentStyleClass: 'h-20rem' }" contentStyleClass="responsive-overlay">
+			<div class="sf__stepper">
+				<div class="sf__stepper__name">
+					<div class="sf__stepper__name-wrapper">
+						<p class="sf__stepper__name-title">Adults</p>
+					</div>
+				</div>
+				<div class="sf__stepper__factor">
+					<div class="sf__stepper__factor-wrapper">
+						<div (click)="changeAdults(-1)" class="sf__stepper__factor__button">
+							<i class="pi pi-minus"></i>
+						</div>
+						<div class="sf__stepper__factor__display-wrapper">
+							<span class="sf__stepper__factor__display">{{ form.adults }}</span>
+						</div>
+						<div (click)="changeAdults(1)" class="sf__stepper__factor__button">
+							<i class="pi pi-plus"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sf__stepper">
+				<div class="sf__stepper__name">
+					<div class="sf__stepper__name-wrapper">
+						<p class="sf__stepper__name-title">Childrens</p>
+						<p class="sf__stepper__name-subtitle">Ages 0-17</p>
+					</div>
+				</div>
+				<div class="sf__stepper__factor">
+					<div class="sf__stepper__factor-wrapper">
+						<div (click)="changeChildrens(-1)" class="sf__stepper__factor__button">
+							<i class="pi pi-minus"></i>
+						</div>
+						<div class="sf__stepper__factor__display-wrapper">
+							<span class="sf__stepper__factor__display">{{ form.childrens }}</span>
+						</div>
+						<div (click)="changeChildrens(1)" class="sf__stepper__factor__button">
+							<i class="pi pi-plus"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</p-overlay>
+	</div>
+	<div class="sf__group w-full">
+		<div (click)="toggleRequirements()" class="sf__group-wrapper">
+			<div class="sf__group-inner">
+				<div class="sf__group-icon">
+					<fa-icon [icon]="faHandPointer"></fa-icon>
+				</div>
+				<div class="sf__group-display">Requirements</div>
+			</div>
+		</div>
+		<p-overlay [(visible)]="overlayRequirementsVisible" [responsive]="{ breakpoint: '640px', direction: 'bottom', contentStyleClass: 'h-20rem' }" contentStyleClass="responsive-overlay">
+			<div class="grid gap-2">
+				<p-toggleButton [(ngModel)]="form.requirements.groundFloor" onLabel="Ground floor" offLabel="Ground floor" onIcon="pi pi-check" offIcon="pi pi-times" iconPos="right"></p-toggleButton>
+				<p-toggleButton [(ngModel)]="form.requirements.balcony" onLabel="With balcony" offLabel="With balcony" onIcon="pi pi-check" offIcon="pi pi-times" iconPos="right"></p-toggleButton>
+				<p-toggleButton [(ngModel)]="form.requirements.twoBathrooms" onLabel="2 bathrooms" offLabel="2 bathrooms" onIcon="pi pi-check" offIcon="pi pi-times" iconPos="right"></p-toggleButton>
+				<p-toggleButton [(ngModel)]="form.requirements.viewOfPark" onLabel="view of the Šanov Park" offLabel="view of the Šanov Park" onIcon="pi pi-check" offIcon="pi pi-times" iconPos="right"></p-toggleButton>
+			</div>
+		</p-overlay>
+		<div class="sf__group sf__button">
+			<div class="sf__group-inner">
+				<div class="sf__button-display">Search apartment</div>
+			</div>
 		</div>
 	</div>
 </div>
