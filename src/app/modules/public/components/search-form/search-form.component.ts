@@ -27,6 +27,18 @@ export class SearchFormComponent {
 			viewOfPark: false,
 		},
 	};
+	formRequirementsCount: number = 0;
+	checkRequirements() {
+		this.formRequirementsCount = 0;
+		for (var key in this.form.requirements) {
+			if (this.form.requirements[key]) {
+				this.formRequirementsCount++;
+			}
+		}
+	}
+	handleRequirementChange(e: any) {
+		this.checkRequirements();
+	}
 
 	overlayStepperVisible: boolean = false;
 	toggleStepper() {

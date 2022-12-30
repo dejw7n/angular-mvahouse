@@ -11,8 +11,10 @@
 
 @layer base {
 	body {
-		background: #fefdf5;
-		@apply font-sans;
+		@apply bg-pampas font-sans;
+	}
+	.wrapper {
+		@apply mx-auto max-w-7xl px-4;
 	}
 }
 
@@ -22,6 +24,16 @@
 	}
 }
 
-.wrapper {
-	@apply mx-auto max-w-7xl px-4;
+.daterangepicker td.today {
+	@apply border-2 border-secondary font-semibold text-secondary;
+}
+.daterangepicker td.today:hover {
+	@apply font-normal;
+}
+.daterangepicker td.in-range {
+	@apply bg-pampas;
+}
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+	@apply border-0 bg-secondary-hover font-normal text-white;
 }

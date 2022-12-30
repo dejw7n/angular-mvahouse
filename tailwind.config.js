@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 const themeColors = {
-	primary: "#9f7627",
-	primaryHover: "#644200",
-	secondary: "#bc9b5b",
-	secondaryHover: "#9f7627",
-	third: "#35459E",
+	pampas: "#F4F4EC",
+	primary: "#906B33",
+	"primary-hover": "#A88A4A",
+	secondary: "#A88A4A",
+	"secondary-hover": "#C4A66F",
+	third: "#3B351C",
 };
 
 module.exports = {
@@ -12,10 +13,11 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
+				pampas: themeColors["pampas"],
 				primary: themeColors["primary"],
-				primaryHover: themeColors["primaryHover"],
+				"primary-hover": themeColors["primary-hover"],
 				secondary: themeColors["secondary"],
-				secondaryHover: themeColors["secondaryHover"],
+				"secondary-hover": themeColors["secondary-hover"],
 				third: themeColors["third"],
 			},
 		},

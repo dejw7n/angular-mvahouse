@@ -83,21 +83,23 @@
 				<div class="sf__group-icon">
 					<fa-icon [icon]="faHandPointer"></fa-icon>
 				</div>
-				<div class="sf__group-display">Requirements</div>
+				<div class="sf__group-display">
+					Requirements <span *ngIf="this.formRequirementsCount >= 1">({{ this.formRequirementsCount }} {{ this.formRequirementsCount == 1 ? "set" : "sets" }})</span>
+				</div>
 			</div>
 		</div>
 		<p-overlay [(visible)]="overlayRequirementsVisible" [responsive]="{ breakpoint: '640px', direction: 'bottom', contentStyleClass: 'h-20rem' }" contentStyleClass="responsive-overlay">
 			<div class="grid gap-2">
-				<p-toggleButton [(ngModel)]="form.requirements.groundFloor" onLabel="Ground floor" offLabel="Ground floor" onIcon="pi pi-check" offIcon="pi pi-times" iconPos="right"></p-toggleButton>
-				<p-toggleButton [(ngModel)]="form.requirements.balcony" onLabel="With balcony" offLabel="With balcony" onIcon="pi pi-check" offIcon="pi pi-times" iconPos="right"></p-toggleButton>
-				<p-toggleButton [(ngModel)]="form.requirements.twoBathrooms" onLabel="2 bathrooms" offLabel="2 bathrooms" onIcon="pi pi-check" offIcon="pi pi-times" iconPos="right"></p-toggleButton>
-				<p-toggleButton [(ngModel)]="form.requirements.viewOfPark" onLabel="view of the Šanov Park" offLabel="view of the Šanov Park" onIcon="pi pi-check" offIcon="pi pi-times" iconPos="right"></p-toggleButton>
+				<p-toggleButton [(ngModel)]="form.requirements.groundFloor" (onChange)="handleRequirementChange($event)" [style]="{ width: '100%' }" onLabel="Ground floor" offLabel="Ground floor" onIcon="pi pi-check" offIcon="pi pi-times" iconPos="right"></p-toggleButton>
+				<p-toggleButton [(ngModel)]="form.requirements.balcony" (onChange)="handleRequirementChange($event)" [style]="{ width: '100%' }" onLabel="With balcony" offLabel="With balcony" onIcon="pi pi-check" offIcon="pi pi-times" iconPos="right"></p-toggleButton>
+				<p-toggleButton [(ngModel)]="form.requirements.twoBathrooms" (onChange)="handleRequirementChange($event)" [style]="{ width: '100%' }" onLabel="2 bathrooms" offLabel="2 bathrooms" onIcon="pi pi-check" offIcon="pi pi-times" iconPos="right"></p-toggleButton>
+				<p-toggleButton [(ngModel)]="form.requirements.viewOfPark" (onChange)="handleRequirementChange($event)" [style]="{ width: '100%' }" onLabel="View of the Šanov Park" offLabel="View of the Šanov Park" onIcon="pi pi-check" offIcon="pi pi-times" iconPos="right"></p-toggleButton>
 			</div>
 		</p-overlay>
-		<div class="sf__group sf__button">
-			<div class="sf__group-inner">
-				<div class="sf__button-display">Search apartment</div>
-			</div>
+	</div>
+	<div class="sf__group sf__button">
+		<div class="sf__group-inner">
+			<div class="sf__button-display">Search apartment</div>
 		</div>
 	</div>
 </div>

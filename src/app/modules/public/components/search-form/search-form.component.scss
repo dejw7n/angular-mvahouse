@@ -19,10 +19,10 @@
 .sf__group-wrapper:hover > .sf__group-inner .sf__group-icon > fa-icon,
 .sf__group .sf__datespicker:hover > .sf__datespicker-label .sf__group-inner .sf__group-icon fa-icon,
 .sf__group .sf__datespicker:hover > .sf__datespicker-label .sf__group-inner .sf__datespicker-display-wrapper .sf__datespicker-display {
-	@apply text-secondaryHover;
+	@apply text-secondary-hover;
 }
 .sf__group .sf__datespicker:hover > .sf__datespicker-label .sf__group-inner .sf__datespicker__divider-wrapper .sf__datespicker__divider {
-	@apply bg-secondaryHover;
+	@apply bg-secondary-hover;
 }
 .sf__group-icon {
 	@apply flex pr-4 text-xl;
@@ -41,7 +41,7 @@
 	@apply bg-primary;
 }
 .sf__button:hover {
-	@apply bg-primaryHover;
+	@apply bg-primary-hover;
 }
 .sf__button-display {
 	@apply text-white;
@@ -80,7 +80,7 @@
 	@apply pt-2;
 }
 .sf__stepper__name {
-	@apply flex;
+	@apply flex pr-4;
 }
 .sf__stepper__name-wrapper {
 	@apply my-auto;
@@ -107,7 +107,7 @@
 	@apply flex h-11 w-11 cursor-pointer rounded-sm border-2 border-secondary text-secondary;
 }
 .sf__stepper__factor__button:hover {
-	@apply border-secondaryHover text-secondaryHover;
+	@apply border-secondary-hover text-secondary-hover;
 }
 .sf__stepper__factor__button i {
 	@apply m-auto;

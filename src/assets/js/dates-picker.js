@@ -21,6 +21,7 @@ var datesPickerJs = (function () {
 						firstDay: 1,
 					},
 					alwaysShowCalendars: false,
+					linkedCalendars: true,
 					startDate: dateStartString,
 					endDate: null,
 					minDate: dateStartString,
