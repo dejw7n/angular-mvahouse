@@ -10,12 +10,13 @@ import { registerLocaleData } from "@angular/common";
 import en from "@angular/common/locales/en";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 registerLocaleData(en);
 
 @NgModule({
 	declarations: [AppComponent],
-	imports: [AppRoutingModule, BrowserModule, BrowserAnimationsModule, FormsModule, HttpClientModule],
+	imports: [AppRoutingModule, BrowserModule, BrowserAnimationsModule, FormsModule, HttpClientModule, FontAwesomeModule],
 	providers: [{ provide: NZ_I18N, useValue: en_US }],
 	bootstrap: [AppComponent],
 })
