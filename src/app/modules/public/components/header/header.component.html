@@ -1,1 +1,21 @@
-<app-header></app-header>
+<app-header>
+	<div class="px-6 py-4">
+		<div class="flex">
+			<div class="">
+				<span class="text-primary">MVAHOUSE</span>
+			</div>
+			<div class="my-auto ml-auto flex gap-8">
+				<div *ngFor="let navLink of navLinks">
+					<span class="font-semibold uppercase text-primary">{{ navLink.label }}</span>
+				</div>
+			</div>
+			<div class="ml-8">
+				<button nz-button nzType="primary" [nzSize]="size">
+					<span nz-icon nzType="download"></span>
+					Download
+				</button>
+				<button pButton type="button" class="p-button-raised p-button-rounded">BOOK NOW</button>
+			</div>
+		</div>
+	</div>
+</app-header>

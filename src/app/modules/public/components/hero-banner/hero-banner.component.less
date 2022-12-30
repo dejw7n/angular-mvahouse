@@ -1,0 +1,23 @@
+.hero-banner {
+	background: var(--primary-color-hover);
+	@apply h-screen;
+}
+.hero-banner-wrapper {
+	@apply h-full;
+}
+.hero-banner-wrapper .headline {
+	@apply uppercase tracking-widest text-primary;
+	font-family: OPTIBerling-Agency;
+}
+.hero-banner-bg {
+	backdrop-filter: invert(1);
+	@apply absolute top-0 h-full w-full overflow-hidden bg-cover bg-left bg-no-repeat xl:bg-contain xl:bg-right xl:backdrop-invert-0;
+	z-index: -1;
+	background-image: url("/assets/images/mvahouse-left.png");
+}
+.hero-banner-bg-shadow {
+	width: 200%;
+	height: 200%;
+	box-shadow: inset 75px 125px 250px 30px #000;
+	@apply xl:hidden;
+}

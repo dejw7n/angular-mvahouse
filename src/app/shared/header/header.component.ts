@@ -4,7 +4,7 @@ import { Component, Inject } from "@angular/core";
 @Component({
 	selector: "app-header",
 	templateUrl: "./header.component.html",
-	styleUrls: ["./header.component.css"],
+	styleUrls: ["./header.component.less"],
 })
 export class HeaderComponent {
 	currentPosition: number = 0;

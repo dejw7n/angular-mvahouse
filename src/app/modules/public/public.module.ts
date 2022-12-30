@@ -14,9 +14,10 @@ import { FormsModule } from "@angular/forms";
 import { OverlayModule } from "primeng/overlay";
 import { SearchResultsComponent } from "./pages/search-results/search-results.component";
 import { DataViewModule } from "primeng/dataview";
+import { NzButtonModule } from "ng-zorro-antd/button";
 
 @NgModule({
 	declarations: [PublicComponent, HomeComponent, HeaderComponent, SearchFormComponent, HeroBannerComponent, SearchResultsComponent],
-	imports: [PublicRoutingModule, SharedModule, OverlayPanelModule, FormsModule, OverlayModule, DataViewModule, ToggleButtonModule, FontAwesomeModule, CommonModule],
+	imports: [PublicRoutingModule, SharedModule, OverlayPanelModule, FormsModule, OverlayModule, DataViewModule, ToggleButtonModule, NzButtonModule, FontAwesomeModule, CommonModule],
 })
 export class PublicModule {}

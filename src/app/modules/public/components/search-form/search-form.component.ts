@@ -7,7 +7,7 @@ declare var datesPickerJs: any;
 @Component({
 	selector: "app-search-form",
 	templateUrl: "./search-form.component.html",
-	styleUrls: ["./search-form.component.scss"],
+	styleUrls: ["./search-form.component.less"],
 })
 export class SearchFormComponent {
 	faHandPointer = faHandPointer;
