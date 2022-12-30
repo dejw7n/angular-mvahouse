@@ -38,9 +38,13 @@
               "src/styles.less",
               "src/assets/less/primeng/theme.less",
               "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "node_modules/primeng/resources/primeng.min.css",
+              "src/assets/less/daterangepicker.less"
             ],
             "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/moment.min.js",
+              "src/assets/js/daterangepicker.min.js",
               "src/assets/js/dates-picker.js"
             ]
           },
