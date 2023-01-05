@@ -1,5 +1,17 @@
 <app-hero-banner></app-hero-banner>
-<app-search-form></app-search-form>
-<!-- <div class="prose">
-	<h1>Welcome!</h1>
-</div> -->
+<section class="grid grid-cols-1 bg-white lg:grid-cols-2">
+	<div class="wrapper flex py-16">
+		<div class="prose my-auto">
+			<h1 class="text-primary">Experience the Comfort and Cleanliness at Our Hotel</h1>
+			<h3 class="font-normal">Welcome to the Hotel, where cleanliness, comfort, and client satisfaction come first. Our spacious and well-appointed rooms offer all of the modern amenities you need to feel at home while away from home. Our hotel is centrally located and offers easy access to local attractions and other points of interest.</h3>
+			<h3 class="font-normal">Come experience a quality stay - every time.</h3>
+		</div>
+	</div>
+	<div class="h-[32rem]">
+		<nz-carousel nzAutoPlay class="nzCarousel h-full w-full">
+			<div nz-carousel-content *ngFor="let slide of introduceCarouselSlides">
+				<img src="{{ slide.imgSrc }}" alt="" class="nzCarousel-img" />
+			</div>
+		</nz-carousel>
+	</div>
+</section>

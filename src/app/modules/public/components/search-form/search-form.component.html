@@ -3,7 +3,7 @@
 		<div class="sf__datespicker">
 			<input type="hidden" id="dates-picker-checkin" name="dates-picker" />
 			<input type="hidden" id="dates-picker-checkout" name="dates-picker" />
-			<input id="dates-picker" type="text" name="dates-picker" />
+			<input id="dates-picker" type="button" name="dates-picker" />
 			<label for="dates-picker" class="sf__datespicker-label flex cursor-pointer">
 				<div class="sf__group-inner">
 					<div class="sf__group-icon">
@@ -77,7 +77,7 @@
 			</div>
 		</p-overlay>
 	</div>
-	<div class="sf__group w-full">
+	<!-- <div class="sf__group w-full">
 		<div (click)="toggleRequirements()" class="sf__group-wrapper">
 			<div class="sf__group-inner">
 				<div class="sf__group-icon">
@@ -96,10 +96,8 @@
 				<p-toggleButton [(ngModel)]="form.requirements.viewOfPark" (onChange)="handleRequirementChange($event)" [style]="{ width: '100%' }" onLabel="View of the Šanov Park" offLabel="View of the Šanov Park" onIcon="pi pi-check" offIcon="pi pi-times" iconPos="right"></p-toggleButton>
 			</div>
 		</p-overlay>
-	</div>
-	<div class="sf__group sf__button">
-		<div class="sf__group-inner">
-			<div class="sf__button-display">Search apartment</div>
-		</div>
+	</div> -->
+	<div class="sf__button">
+		<button nz-button nzType="primary" [nzSize]="size" class="sf__button-display">Search apartment</button>
 	</div>
 </div>

@@ -2,7 +2,7 @@
 const themeColors = {
 	pampas: "#F4F4EC",
 	primary: "#d2ae70",
-	"primary-hover": "#A88A4A",
+	"primary-hover": "#dec799",
 	secondary: "#A88A4A",
 	"secondary-hover": "#C4A66F",
 	third: "#3B351C",

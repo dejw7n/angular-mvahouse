@@ -1,19 +1,14 @@
 .sf {
-	width: auto;
-	@apply mx-0 -mt-8 block rounded-sm lg:mx-16 lg:flex lg:h-16;
+	@apply mx-0 w-auto rounded-2xl bg-white py-4;
 }
 .sf__group {
-	@apply flex cursor-pointer select-none bg-white;
-}
-.sf__group:not(:first-child) {
-	@apply border-l-2 border-l-secondary;
+	@apply flex cursor-pointer select-none;
 }
 .sf__group-wrapper {
 	@apply flex w-full;
 }
 .sf__group-inner {
-	display: flex;
-	@apply my-auto w-full px-6;
+	@apply my-auto flex w-full px-6 py-4;
 }
 .sf__group-wrapper:hover > .sf__group-inner .sf__group-display,
 .sf__group-wrapper:hover > .sf__group-inner .sf__group-icon > fa-icon,
@@ -31,46 +26,40 @@
 	@apply my-auto text-secondary;
 }
 .sf__group-display,
-.sf__datespicker-display,
-.sf__button-display {
+.sf__datespicker-display {
 	@apply my-auto w-max font-semibold text-secondary;
 }
-//button
-.sf__button {
-	display: flex;
-	@apply bg-primary;
+.sf__group-display,
+.sf__datespicker-display,
+.sf__button-display {
+	@apply text-base lg:text-[17px];
 }
-.sf__button:hover {
-	@apply bg-primary-hover;
+.sf__button {
+	@apply px-4 pt-2;
 }
 .sf__button-display {
-	@apply text-white;
+	@apply h-full w-full py-2 font-semibold;
 }
-
 //dates
 .sf__datespicker {
-	display: flex;
-	width: 100%;
-	height: 100%;
+	// width: 255px;
+	@apply flex h-full w-full;
 }
 .sf__datespicker input#dates-picker {
 	width: 0px;
 	height: 0px;
-	overflow: hidden;
+	@apply overflow-hidden;
 }
 .sf__datespicker label {
-	width: 100%;
-	height: 100%;
+	@apply h-full w-full;
 }
 .sf__datespicker__divider-wrapper {
-	display: flex;
-	@apply px-2;
+	@apply flex px-2;
 }
 .sf__datespicker__divider {
-	margin: auto 0;
 	width: 10px;
 	height: 1px;
-	@apply bg-secondary;
+	@apply my-auto bg-secondary;
 }
 //stepper
 .sf__stepper {

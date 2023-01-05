@@ -1,20 +1,25 @@
 <app-header>
-	<div class="px-6 py-4">
+	<div class="px-6 py-4 backdrop-brightness-50 lg:backdrop-brightness-100">
 		<div class="flex">
-			<div class="">
-				<span class="text-primary">MVAHOUSE</span>
-			</div>
-			<div class="my-auto ml-auto flex gap-8">
+			<a href="/#">
+				<div class="flex">
+					<img src="/assets/images/logo.png" alt="" class="aspect-square h-10" />
+					<!-- <div class="my-auto ml-2">
+						<span class="font-berling text-2xl text-[#efe6da]">MVAHOUSE</span>
+					</div> -->
+				</div>
+			</a>
+			<div class="my-auto ml-auto flex hidden gap-8 sm:flex">
 				<div *ngFor="let navLink of navLinks">
-					<span class="font-semibold uppercase text-primary">{{ navLink.label }}</span>
+					<a href="{{ navLink.href }}">
+						<div class="h-full w-full border-b-2 border-b-primary px-1 text-primary hover:border-b-primary-hover hover:text-primary-hover">
+							<span class="peer font-semibold uppercase">{{ navLink.label }}</span>
+						</div>
+					</a>
 				</div>
 			</div>
 			<div class="ml-8">
-				<button nz-button nzType="primary" [nzSize]="size">
-					<span nz-icon nzType="download"></span>
-					Download
-				</button>
-				<button pButton type="button" class="p-button-raised p-button-rounded">BOOK NOW</button>
+				<button nz-button nzType="primary" [nzSize]="size" nzShape="round">BOOK NOW</button>
 			</div>
 		</div>
 	</div>

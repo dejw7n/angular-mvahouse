@@ -16,11 +16,11 @@ export class HeaderComponent {
 		},
 		{
 			label: "About us",
-			href: "/",
+			href: "/about-us",
 		},
 		{
 			label: "Contact us",
-			href: "/",
+			href: "/contact-us",
 		},
 	];
 }

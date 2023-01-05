@@ -1,7 +1,6 @@
 // Custom Theming for NG-ZORRO
 // For more information: https://ng.ant.design/docs/customize-theme/en
 @import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
-
 // Override less variables to here
 // View all variables: https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/components/style/themes/default.less
 @primary-color: #d2ae70;
@@ -10,27 +9,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--primary-color: @primary-color;
-	--primary-color-hover: @primary-color-hover;
-	--primary-color-active: @primary-color-active;
-	--primary-color-outline: @primary-color-outline;
-	--secondary: #a88a4a;
-}
-
-@font-face {
-	font-family: "OPTIBerling-Agency";
-	src: url("/assets/fonts/OPTIBerling-Agency.ttf.woff") format("woff"), url("/assets/fonts/OPTIBerling-Agency.ttf.svg#OPTIBerling-Agency") format("svg"), url("/assets/fonts/OPTIBerling-Agency.ttf.eot"), url("/assets/fonts/OPTIBerling-Agency.ttf.eot?#iefix") format("embedded-opentype");
-	font-weight: normal;
-	font-style: normal;
-}
-
 @layer base {
+	:root {
+		--primary-color: @primary-color;
+		--primary-color-hover: @primary-color-hover;
+		--primary-color-active: @primary-color-active;
+		--primary-color-outline: @primary-color-outline;
+	}
+	@font-face {
+		font-family: "OPTIBerling-Agency";
+		src: url("/assets/fonts/OPTIBerling-Agency.ttf.woff") format("woff"), url("/assets/fonts/OPTIBerling-Agency.ttf.svg#OPTIBerling-Agency") format("svg"), url("/assets/fonts/OPTIBerling-Agency.ttf.eot"), url("/assets/fonts/OPTIBerling-Agency.ttf.eot?#iefix") format("embedded-opentype");
+		font-weight: normal;
+		font-style: normal;
+	}
 	body {
 		@apply bg-pampas font-sans;
-	}
-	.wrapper {
-		@apply px-8 lg:px-16;
 	}
 }
 
@@ -38,18 +31,36 @@
 	.responsive-overlay {
 		@apply rounded-md bg-white p-4 shadow-md;
 	}
+	.daterangepicker td.today {
+		@apply border-2 border-secondary font-semibold text-secondary;
+	}
+	.daterangepicker td.today:hover {
+		@apply font-normal;
+	}
+	.daterangepicker td.in-range {
+		@apply bg-pampas;
+	}
+	.daterangepicker td.active,
+	.daterangepicker td.active:hover {
+		@apply border-0 bg-secondary-hover font-normal text-white;
+	}
 }
-
-.daterangepicker td.today {
-	@apply border-2 border-secondary font-semibold text-secondary;
+.wrapper {
+	@apply px-4 lg:px-16;
 }
-.daterangepicker td.today:hover {
-	@apply font-normal;
+.wrapper-left {
+	@apply pl-4 lg:pl-16;
 }
-.daterangepicker td.in-range {
-	@apply bg-pampas;
+.font-berling {
+	font-family: "OPTIBerling-Agency";
 }
-.daterangepicker td.active,
-.daterangepicker td.active:hover {
-	@apply border-0 bg-secondary-hover font-normal text-white;
+.nzCarousel {
+	background: #000;
+	overflow: hidden;
+}
+.nzCarousel-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
 }
