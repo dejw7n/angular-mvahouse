@@ -4,6 +4,18 @@
   "newProjectRoot": "projects",
   "projects": {
     "mvahouse": {
+      "i18n": {
+        "sourceLocale": {
+          "baseHref": "/",
+          "code": "en"
+        },
+        "locales": {
+          "cs": {
+            "translation": "src/locale/messages.cs.xlf",
+            "baseHref": "/cs/"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,6 +29,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": [
+              "en"
+            ],
             "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -69,7 +84,7 @@
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true,
+              "sourceMap": false,
               "namedChunks": true
             }
           },

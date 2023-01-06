@@ -10,13 +10,13 @@
 						<fa-icon [icon]="faCalendar"></fa-icon>
 					</div>
 					<div class="sf__datespicker-display-wrapper flex">
-						<div id="dates-picker-checkin-display" class="sf__datespicker-display">Check-in</div>
+						<div i18n id="dates-picker-checkin-display" class="sf__datespicker-display">Check-in</div>
 					</div>
 					<div class="sf__datespicker__divider-wrapper">
 						<div class="sf__datespicker__divider"></div>
 					</div>
 					<div class="sf__datespicker-display-wrapper flex">
-						<div id="dates-picker-checkout-display" class="sf__datespicker-display">Check-out</div>
+						<div i18n id="dates-picker-checkout-display" class="sf__datespicker-display">Check-out</div>
 					</div>
 				</div>
 			</label>
@@ -28,16 +28,16 @@
 				<div class="sf__group-icon">
 					<fa-icon [icon]="faHandPointer"></fa-icon>
 				</div>
-				<div class="sf__group-display">{{ form.adults }} adults</div>
+				<div class="sf__group-display">{{ form.adults }} <span i18n>adults</span></div>
 				<div class="sf__group-display px-2"><span class="text-3xl leading-none">·</span></div>
-				<div class="sf__group-display">{{ form.childrens }} children</div>
+				<div class="sf__group-display">{{ form.childrens }} <span i18n>children</span></div>
 			</div>
 		</div>
 		<p-overlay [(visible)]="overlayStepperVisible" [responsive]="{ breakpoint: '640px', direction: 'bottom', contentStyleClass: 'h-20rem' }" contentStyleClass="responsive-overlay">
 			<div class="sf__stepper">
 				<div class="sf__stepper__name">
 					<div class="sf__stepper__name-wrapper">
-						<p class="sf__stepper__name-title">Adults</p>
+						<p i18n class="sf__stepper__name-title">Adults</p>
 					</div>
 				</div>
 				<div class="sf__stepper__factor">
@@ -57,8 +57,8 @@
 			<div class="sf__stepper">
 				<div class="sf__stepper__name">
 					<div class="sf__stepper__name-wrapper">
-						<p class="sf__stepper__name-title">Childrens</p>
-						<p class="sf__stepper__name-subtitle">Ages 0-17</p>
+						<p i18n class="sf__stepper__name-title">Childrens</p>
+						<p class="sf__stepper__name-subtitle"><span i18n>Ages</span> 0-17</p>
 					</div>
 				</div>
 				<div class="sf__stepper__factor">
@@ -98,6 +98,6 @@
 		</p-overlay>
 	</div> -->
 	<div class="sf__button">
-		<button nz-button nzType="primary" [nzSize]="size" class="sf__button-display">Search apartment</button>
+		<button i18n nz-button nzType="primary" [nzSize]="size" class="sf__button-display">Search apartment</button>
 	</div>
 </div>

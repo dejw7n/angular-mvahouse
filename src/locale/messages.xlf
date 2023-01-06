@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="361095495385153904" datatype="html">
+        <source>BOOK NOW</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/components/header/header.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1810939563839069796" datatype="html">
+        <source>Where your satisfaction is our top priority.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/components/hero-banner/hero-banner.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4087504550916570532" datatype="html">
+        <source>Book direct</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/components/hero-banner/hero-banner.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4890965649709420628" datatype="html">
+        <source> Book directly on our website<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> and save <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;font-semibold&quot;&gt;"/>10-15%<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/components/hero-banner/hero-banner.component.html</context>
+          <context context-type="linenumber">23,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="294733429660547646" datatype="html">
+        <source>Check-in</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7445324744425922278" datatype="html">
+        <source>Check-out</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3136693320197664693" datatype="html">
+        <source>adults</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3074933176329535920" datatype="html">
+        <source>children</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5674559636104858599" datatype="html">
+        <source>Adults</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1055774069201755823" datatype="html">
+        <source>Childrens</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4722018271696983912" datatype="html">
+        <source>Ages</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6146171781810911135" datatype="html">
+        <source>Search apartment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/components/search-form/search-form.component.html</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6495173413182797020" datatype="html">
+        <source>Experience the Comfort and Cleanliness at Our Hotel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/pages/home/home.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6537996840166683828" datatype="html">
+        <source>Welcome to the Hotel, where cleanliness, comfort, and client satisfaction come first. Our spacious and well-appointed rooms offer all of the modern amenities you need to feel at home while away from home. Our hotel is centrally located and offers easy access to local attractions and other points of interest.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/pages/home/home.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7851801269838237836" datatype="html">
+        <source>Come experience a quality stay - every time.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/pages/home/home.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="187187500641108332" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ slide.imgAlt }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/public/pages/home/home.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
