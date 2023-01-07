@@ -1,0 +1,14 @@
+<p-dropdown [options]="languages" [(ngModel)]="selectedLanguage" optionLabel="name" filterBy="name" [showClear]="false" placeholder="Select a Language">
+	<ng-template pTemplate="selectedItem">
+		<div class="language-item language-item-value" *ngIf="selectedLanguage">
+			<img [class]="'flag flag-' + selectedLanguage.code.toLowerCase()" />
+			<div>{{ selectedLanguage.name }}</div>
+		</div>
+	</ng-template>
+	<ng-template let-language pTemplate="item">
+		<div class="language-item">
+			<div class="my-auto" [class]="'flag flag-' + language.code.toLowerCase()"></div>
+			<span class="my-auto leading-none">{{ language.name }}</span>
+		</div>
+	</ng-template>
+</p-dropdown>

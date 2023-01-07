@@ -12,9 +12,10 @@ import { ToggleButtonModule } from "primeng/togglebutton";
 import { OverlayModule } from "primeng/overlay";
 import { NzButtonModule } from "ng-zorro-antd/button";
 import { NzCarouselModule } from "ng-zorro-antd/carousel";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
 	declarations: [PublicComponent, HomeComponent, HeaderComponent, SearchFormComponent, HeroBannerComponent],
-	imports: [PublicRoutingModule, SharedModule, NzCarouselModule, OverlayModule, ToggleButtonModule, NzButtonModule, FontAwesomeModule, CommonModule],
+	imports: [PublicRoutingModule, SharedModule, FormsModule, NzCarouselModule, OverlayModule, ToggleButtonModule, NzButtonModule, FontAwesomeModule, CommonModule],
 })
 export class PublicModule {}
