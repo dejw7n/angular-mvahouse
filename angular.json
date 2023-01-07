@@ -6,13 +6,13 @@
     "mvahouse": {
       "i18n": {
         "sourceLocale": {
-          "baseHref": "/en/",
+          "baseHref": "/en-US/",
           "code": "en"
         },
         "locales": {
           "cs": {
             "translation": "src/locale/messages.cs.xlf",
-            "baseHref": "/cs/"
+            "baseHref": "/cs-CZ/"
           }
         }
       },
@@ -30,8 +30,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "localize": [
-              "en",
-              "cs"
+              "en"
             ],
             "outputPath": "dist/",
             "index": "src/index.html",
