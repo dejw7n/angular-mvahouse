@@ -6,13 +6,13 @@
     "mvahouse": {
       "i18n": {
         "sourceLocale": {
-          "baseHref": "/en-US/",
+          "baseHref": "/en/",
           "code": "en"
         },
         "locales": {
           "cs": {
             "translation": "src/locale/messages.cs.xlf",
-            "baseHref": "/cs-CZ/"
+            "baseHref": "/cs/"
           }
         }
       },

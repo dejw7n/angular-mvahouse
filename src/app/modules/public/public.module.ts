@@ -1,3 +1,4 @@
+import { CoreModule } from "./../../core/core.module";
 import { SharedModule } from "./../../shared/shared.module";
 import { PublicRoutingModule } from "./public-routing.module";
 import { NgModule } from "@angular/core";
@@ -16,6 +17,6 @@ import { FormsModule } from "@angular/forms";
 
 @NgModule({
 	declarations: [PublicComponent, HomeComponent, HeaderComponent, SearchFormComponent, HeroBannerComponent],
-	imports: [PublicRoutingModule, SharedModule, FormsModule, NzCarouselModule, OverlayModule, ToggleButtonModule, NzButtonModule, FontAwesomeModule, CommonModule],
+	imports: [PublicRoutingModule, CoreModule, SharedModule, FormsModule, NzCarouselModule, OverlayModule, ToggleButtonModule, NzButtonModule, FontAwesomeModule, CommonModule],
 })
 export class PublicModule {}
