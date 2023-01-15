@@ -1,5 +1,5 @@
 .sf {
-	@apply mx-0 w-auto rounded-2xl bg-white py-4;
+	@apply mx-0 flex w-auto flex-col gap-2;
 }
 .sf__group {
 	@apply flex cursor-pointer select-none;
@@ -8,7 +8,7 @@
 	@apply flex w-full;
 }
 .sf__group-inner {
-	@apply my-auto flex w-full px-6 py-4;
+	@apply my-auto flex w-full border-2 border-zinc-200 py-2 px-4;
 }
 .sf__group-wrapper:hover > .sf__group-inner .sf__group-display,
 .sf__group-wrapper:hover > .sf__group-inner .sf__group-icon > fa-icon,
@@ -20,7 +20,7 @@
 	@apply bg-secondary-hover;
 }
 .sf__group-icon {
-	@apply flex pr-4 text-xl;
+	@apply flex pr-3 text-lg;
 }
 .sf__group-icon fa-icon {
 	@apply my-auto text-secondary;
@@ -32,13 +32,13 @@
 .sf__group-display,
 .sf__datespicker-display,
 .sf__button-display {
-	@apply text-base lg:text-[17px];
+	@apply text-base lg:text-[16px];
 }
 .sf__button {
-	@apply px-4 pt-2;
+	@apply pt-2;
 }
 .sf__button-display {
-	@apply h-full w-full py-2 font-semibold;
+	@apply h-full w-full py-3 font-semibold;
 }
 //dates
 .sf__datespicker {
