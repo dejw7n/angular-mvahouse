@@ -23,7 +23,8 @@
 		font-style: normal;
 	}
 	body {
-		@apply bg-pampas font-sans;
+		background: #faf2ed;
+		@apply font-sans;
 	}
 }
 
@@ -51,9 +52,29 @@
 .wrapper-left {
 	@apply pl-4 lg:pl-16;
 }
+.wrapper-right {
+	@apply pr-4 lg:pr-16;
+}
+@media (min-width: 1024px) {
+	.lg\:wrapper-left {
+		@apply px-0 pl-16;
+	}
+	.lg\:wrapper-right {
+		@apply px-0 pr-16;
+	}
+}
 .font-berling {
 	font-family: "OPTIBerling-Agency";
 }
+//primeNg
+p-slider {
+	height: 35px !important;
+}
+.p-slider.p-slider-horizontal {
+	height: 15px !important;
+}
+
+//ngZorro
 .nzCarousel {
 	background: #000;
 	overflow: hidden;
