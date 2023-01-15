@@ -1,0 +1,35 @@
+<div class="wrapper-left w-full overflow-hidden">
+	<div class="flex h-[600px] w-full cursor-pointer gap-8">
+		<img src="./assets/images/apartments/apartment-4/1.jpg" alt="" class="aspect-video h-full object-cover" />
+		<img src="./assets/images/apartments/apartment-4/1.jpg" alt="" class="aspect-video h-full object-cover" />
+	</div>
+</div>
+<div class="wrapper mt-12">
+	<p class="font-berling text-8xl uppercase">DELUXE ROOM</p>
+	<div class="font-berling mt-6 flex text-4xl uppercase">
+		<span class="my-auto">250 €</span>
+		<span class="text-5xl">/</span>
+		<span class="my-auto">PER NIGHT</span>
+	</div>
+	<div class="mt-12 flex">
+		<div class="grid grid-cols-3 gap-x-24 gap-y-8">
+			<div *ngFor="let index of [0, 1, 2, 3, 4, 5]" class="flex gap-8">
+				<fa-icon [icon]="faWifi" class="text-2xl"></fa-icon>
+				<span class="my-auto text-xl font-semibold">Free Wifi</span>
+			</div>
+		</div>
+		<div class="ml-auto flex">
+			<app-shared-button-book class="mt-auto">BOOK NOW</app-shared-button-book>
+		</div>
+	</div>
+</div>
+<div class="mt-32">
+	<p class="wrapper font-berling text-6xl uppercase leading-tight tracking-wide">DISCOVER ROOM<br />WITH FRENCH BALCONY</p>
+	<div class="mt-16 grid grid-cols-2">
+		<img src="./assets/images/apartments/apartment-4/1.jpg" alt="" class="h-[400px] w-full object-cover" />
+		<div class="">
+			<p class="">Deluxe room includes tilt-turn windows, light floor, magnifying mirror. The room also features air conditioning, TV, minibar and safe.</p>
+			<p class="">The French balcony in the room offers a unique view of Šanovský park. Spend warm evenings on it, take photos and enjoy.</p>
+		</div>
+	</div>
+</div>
