@@ -1,14 +1,15 @@
-// Custom Theming for NG-ZORRO
-// For more information: https://ng.ant.design/docs/customize-theme/en
 @import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
-// Override less variables to here
 // View all variables: https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/components/style/themes/default.less
 @primary-color: #d2ae70;
+
+@import "./assets/less/primeng/theme.less";
+@import "./assets/less/daterangepicker.less";
+@import "./assets/less/flags.less";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
 	:root {
 		--primary-color: @primary-color;
@@ -16,15 +17,10 @@
 		--primary-color-active: @primary-color-active;
 		--primary-color-outline: @primary-color-outline;
 	}
-	@font-face {
-		font-family: "OPTIBerling-Agency";
-		src: url("./assets/fonts/OPTIBerling-Agency.ttf.woff") format("woff"), url("./assets/fonts/OPTIBerling-Agency.ttf.svg#OPTIBerling-Agency") format("svg"), url("./assets/fonts/OPTIBerling-Agency.ttf.eot"), url("./assets/fonts/OPTIBerling-Agency.ttf.eot?#iefix") format("embedded-opentype");
-		font-weight: normal;
-		font-style: normal;
-	}
 	body {
+		font-family: "Playfair Display", serif !important;
+		line-height: 1 !important;
 		background: #faf2ed;
-		@apply font-sans;
 	}
 }
 
@@ -62,9 +58,6 @@
 	.lg\:wrapper-right {
 		@apply px-0 pr-16;
 	}
-}
-.font-berling {
-	font-family: "OPTIBerling-Agency";
 }
 //primeNg
 p-slider {

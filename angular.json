@@ -51,11 +51,8 @@
             ],
             "styles": [
               "src/styles.less",
-              "src/assets/less/primeng/theme.less",
               "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/primeng.min.css",
-              "src/assets/less/daterangepicker.less",
-              "src/assets/less/flags.less"
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": [
               "src/assets/js/jquery.min.js",
