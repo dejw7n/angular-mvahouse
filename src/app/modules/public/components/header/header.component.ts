@@ -1,6 +1,4 @@
 import { Component } from "@angular/core";
-import { NzButtonSize } from "ng-zorro-antd/button";
-import { DropdownFilterOptions } from "primeng/dropdown";
 
 @Component({
 	selector: "app-public-header",
@@ -8,7 +6,6 @@ import { DropdownFilterOptions } from "primeng/dropdown";
 	styleUrls: ["./header.component.less"],
 })
 export class HeaderComponent {
-	size: NzButtonSize = "large";
 	navLinks: any = [
 		{
 			label: "Home",
