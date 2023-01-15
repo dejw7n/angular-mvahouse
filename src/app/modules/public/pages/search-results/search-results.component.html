@@ -1,0 +1,62 @@
+<div class="wrapper lg:wrapper-right">
+	<div class="block md:flex">
+		<div class="bg-white">
+			<div class="as-hotel flex">
+				<p class="my-auto text-lg font-semibold">
+					<fa-icon class="mr-1 text-2xl text-gray-400" [icon]="faMagnifyingGlass"></fa-icon>
+					Vrchlického 1240/23, Teplice 415 01
+				</p>
+			</div>
+			<div class="as-searchbox">
+				<app-search-form></app-search-form>
+			</div>
+			<div class="as-filters flex flex-col gap-4">
+				<p class="text-lg font-bold uppercase leading-none">PRICE RANGE</p>
+				<div>
+					<div class="px-1">
+						<p-slider class="rangePrice" [(ngModel)]="rangeValues" [range]="true" [min]="0" [max]="500"></p-slider>
+					</div>
+					<div class="mt-1 flex text-lg">
+						<span>{{ rangeValues[0] }} €</span>
+						<span class="ml-auto">{{ rangeValues[1] }} €</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<div class="relative flex h-[420px] w-full overflow-hidden">
+				<img src="/assets/images/search-banner.jpg" alt="" class="absolute -z-10 h-full w-full object-cover" />
+				<div class="m-auto m-8 bg-white">
+					<div class="elfsight-app-990ab9a6-6a44-4280-b8a4-14d93f4d25c6"></div>
+				</div>
+			</div>
+			<div class="px-8">
+				<p class="py-8 text-center text-xl font-bold uppercase">Accommodations (4)</p>
+				<div class="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
+					<div *ngFor="let item of [0, 1, 2, 3]" class="gap-4 bg-white shadow-lg duration-300 hover:shadow-xl">
+						<div class="aspect-video h-72 w-full">
+							<img src="./assets/images/apartments/apartment-24/1.jpg" alt="" class="h-full w-full object-cover" />
+						</div>
+						<div class="w-full p-4">
+							<div class="">
+								<p class="text-2xl font-semibold">Dvojlůžkový apartmán</p>
+								<p class="text-gray-600">Vrchlického 1240/23, Teplice 415 01</p>
+							</div>
+							<div class="ml-auto flex flex-col">
+								<div class="my-auto grid gap-1 text-right">
+									<p class="leading-none text-gray-600">3 nights</p>
+									<p class="text-right text-2xl font-semibold leading-none leading-none">240 €</p>
+									<p class="text-gray-700">Includes taxes and charges</p>
+									<button nz-button nzType="primary" [nzSize]="'large'" class="mt-2">
+										<fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+										<span class="ml-2">View apartment</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
