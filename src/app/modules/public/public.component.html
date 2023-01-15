@@ -1,2 +1,6 @@
-<!-- <app-public-header></app-public-header> -->
+<div *ngIf="router.url !== '/'">
+	<div class="backdrop-blur-0">
+		<app-public-header></app-public-header>
+	</div>
+</div>
 <router-outlet></router-outlet>
