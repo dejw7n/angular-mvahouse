@@ -36,4 +36,27 @@ export class HomeComponent {
 			imgAlt: "MVA House Interior",
 		},
 	];
+	carouselSlides = [
+		{
+			imgSrc: "assets/images/mvahouse/interior/1.jpg",
+		},
+		{
+			imgSrc: "assets/images/mvahouse/interior/2.jpg",
+		},
+		{
+			imgSrc: "assets/images/mvahouse/interior/3.jpg",
+		},
+		{
+			imgSrc: "assets/images/mvahouse/interior/4.jpg",
+		},
+		{
+			imgSrc: "assets/images/mvahouse/interior/5.jpg",
+		},
+		{
+			imgSrc: "assets/images/mvahouse/interior/6.jpg",
+		},
+		{
+			imgSrc: "assets/images/mvahouse/interior/7.jpg",
+		},
+	];
 }

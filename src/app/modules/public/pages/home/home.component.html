@@ -1,4 +1,42 @@
-<app-hero-banner></app-hero-banner>
+<div class="hero-banner">
+	<div class="hero-banner-wrapper">
+		<!-- <a href="/">
+			<h1 class="headline text-center text-5xl tracking-widest text-primary lg:text-6xl xl:text-7xl 2xl:text-8xl">MVAHOUSE</h1>
+		</a> -->
+		<div class="hero-banner-bg" style="background-image: url('./assets/images/mvahouse/exterior/front-right.png')">
+			<div class="hero-banner-bg-shadow"></div>
+		</div>
+		<app-public-header></app-public-header>
+		<div class="top-0 flex h-full w-full flex-col overflow-hidden backdrop-brightness-50 lg:absolute lg:w-fit">
+			<div class="wrapper mt-32 mb-8">
+				<p class="headline text-5xl lg:text-6xl xl:text-8xl">MVAHOUSE</p>
+				<p class="headline text-3xl lg:text-4xl xl:text-6xl">APARTHOTEL</p>
+				<p i18n class="mt-16 text-2xl tracking-wider text-gray-200">Where your satisfaction is our top priority.</p>
+			</div>
+			<div class="flex h-full">
+				<div class="mt-auto w-full bg-gradient-to-r from-primary to-secondary sm:w-fit lg:rounded-tr-3xl">
+					<div class="wrapper-left w-full pt-12 pr-4 lg:pr-8">
+						<div class="rounded-2xl bg-white px-4 py-4">
+							<app-search-form></app-search-form>
+						</div>
+						<div class="mt-8 mb-2 flex">
+							<div class="my-auto mr-4">
+								<p i18n class="text-3xl font-semibold text-white">Book direct</p>
+								<p i18n class="text-lg text-white">
+									Book directly on our website<br />
+									and save <span class="font-semibold">10-15%</span>.
+								</p>
+							</div>
+							<img src="./assets/images/direct.png" alt="Book direct" class="ml-auto h-32 w-32" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <app-search-form></app-search-form> -->
+	</div>
+</div>
+
 <section class="grid grid-cols-1 bg-white lg:grid-cols-2">
 	<div class="wrapper flex py-16">
 		<div class="prose my-auto">
