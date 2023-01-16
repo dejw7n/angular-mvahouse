@@ -52,7 +52,9 @@
             "styles": [
               "src/styles.less",
               "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/ng-devui/devui.min.css",
+              "node_modules/@devui-design/icons/icomoon/devui-icon.css"
             ],
             "scripts": [
               "src/assets/js/jquery.min.js",
