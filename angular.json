@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mvahouse": {
+    "project": {
       "i18n": {
         "sourceLocale": {
           "baseHref": "/en/",
@@ -106,10 +106,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "mvahouse:build:production"
+              "browserTarget": "project:build:production"
             },
             "development": {
-              "browserTarget": "mvahouse:build:development"
+              "browserTarget": "project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -117,7 +117,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mvahouse:build"
+            "browserTarget": "project:build"
           }
         },
         "test": {
