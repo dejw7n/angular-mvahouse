@@ -3,41 +3,80 @@
 		<!-- <a href="/">
 			<h1 class="headline text-center text-5xl tracking-widest text-primary lg:text-6xl xl:text-7xl 2xl:text-8xl">MVAHOUSE</h1>
 		</a> -->
-		<div class="hero-banner-bg" style="background-image: url('./assets/images/mvahouse/exterior/front-right.png')">
+		<div class="hero-banner-bg -z-10" style="background-image: url('./assets/images/mvahouse/exterior/front-right.png')">
 			<div class="hero-banner-bg-shadow"></div>
 		</div>
-		<app-public-header></app-public-header>
-		<div class="top-0 flex h-full w-full flex-col overflow-hidden backdrop-brightness-50 lg:absolute lg:w-fit">
-			<div class="wrapper mt-32 mb-8">
-				<p class="headline text-5xl lg:text-6xl xl:text-8xl">MVAHOUSE</p>
-				<p class="headline text-3xl lg:text-4xl xl:text-6xl">APARTHOTEL</p>
-				<p i18n class="mt-16 text-2xl tracking-wider text-gray-200">Where your satisfaction is our top priority.</p>
-			</div>
-			<div class="flex h-full">
-				<div class="mt-auto w-full bg-gradient-to-r from-primary to-secondary sm:w-fit lg:rounded-tr-3xl">
-					<div class="wrapper-left w-full pt-12 pr-4 lg:pr-8">
-						<div class="rounded-2xl bg-white px-4 py-4">
-							<app-search-form></app-search-form>
-						</div>
-						<div class="mt-8 mb-2 flex">
-							<div class="my-auto mr-4">
-								<p i18n class="text-3xl font-semibold leading-none text-white">Book direct</p>
-								<p i18n class="text-lg text-white">
-									Book directly on our website<br />
-									and save <span class="font-semibold">10-15%</span>.
-								</p>
+		<div class="z-20">
+			<app-public-header></app-public-header>
+		</div>
+		<div class="top-0 flex h-full w-full flex-col overflow-hidden lg:absolute lg:w-fit">
+			<div class="absolute top-0 z-10 h-full w-full bg-black opacity-75"></div>
+			<div class="z-10 flex h-full flex-col overflow-hidden">
+				<div class="wrapper mt-32 mb-8">
+					<p class="headline text-5xl lg:text-6xl xl:text-8xl">{{ hotelDetails.title }}</p>
+					<p class="headline text-3xl lg:text-4xl xl:text-6xl">APARTHOTEL</p>
+					<p i18n class="mt-16 text-2xl tracking-wider text-gray-200">Where your satisfaction is our top priority.</p>
+				</div>
+				<div class="flex h-full">
+					<div class="mt-auto w-full bg-gradient-to-b from-gray-100 to-white sm:w-fit sm:rounded-tr-3xl">
+						<div class="wrapper-left w-full pt-12 pr-4 lg:pr-8">
+							<div class="px-4 py-4">
+								<app-search-form></app-search-form>
 							</div>
-							<img src="./assets/images/direct.png" alt="Book direct" class="ml-auto h-32 w-32" />
+							<div class="mt-8 mb-2 flex">
+								<div class="my-auto mr-4 text-black">
+									<p i18n class="text-3xl font-semibold leading-none text-tertiary-hover">Book direct</p>
+									<p i18n class="text-lg">
+										Book directly on our website<br />
+										and save <span class="font-semibold">10-15%</span>.
+									</p>
+								</div>
+								<img src="./assets/images/direct.png" alt="Book direct" class="ml-auto h-32 w-32" />
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- <app-search-form></app-search-form> -->
 	</div>
 </div>
-
-<section class="grid grid-cols-1 bg-white lg:grid-cols-2">
+<section class="intro-section">
+	<div class="intro-container">
+		<div class="intro-content">
+			<p class="intro-subtitle">About us</p>
+			<p class="intro-title">Experience the Comfort and Cleanliness at Our Hotel</p>
+			<p class="intro-description">Welcome to the Hotel, where cleanliness, comfort, and client satisfaction come first. Our hotel is centrally located and offers easy access to local attractions and other points of interest. Come experience a quality stay - every time.</p>
+		</div>
+	</div>
+	<div class="intro-carousel">
+		<nz-image-group>
+			<p-carousel [value]="carouselSlides" [numVisible]="3" [numScroll]="1" [autoplayInterval]="3000" [circular]="true" [showNavigators]="false" [showIndicators]="false">
+				<ng-template let-slide pTemplate="item">
+					<img nz-image nzSrc="{{ slide.imgSrc }}" alt="{{ slide.imgAlt }}" class="h-full w-full object-cover" />
+				</ng-template>
+			</p-carousel>
+		</nz-image-group>
+	</div>
+</section>
+<section class="intro-section">
+	<div class="intro-container">
+		<div class="intro-content">
+			<p class="intro-subtitle">Convenient Room Amenities</p>
+			<p class="intro-title">Fully equipped rooms with kitchen and laundry facilities</p>
+			<p class="intro-description">Experience the comforts of home with fully equipped rooms, including a washing machine and kitchen, at our hotel - Perfect for extended stays.</p>
+		</div>
+	</div>
+	<div class="intro-carousel intro-carousel-rooms">
+		<p-carousel [value]="carouselSlides" [numVisible]="3" [numScroll]="1" [autoplayInterval]="3000" [circular]="true" [showNavigators]="false" [showIndicators]="false">
+			<ng-template let-slide pTemplate="item">
+				<div class="intro-carousel-room">
+					<app-room-card></app-room-card>
+				</div>
+			</ng-template>
+		</p-carousel>
+	</div>
+</section>
+<!-- <section class="grid grid-cols-1 bg-white lg:grid-cols-2">
 	<div class="wrapper flex py-16">
 		<div class="prose my-auto">
 			<h1 i18n class="text-primary">Experience the Comfort and Cleanliness at Our Hotel</h1>
@@ -47,9 +86,9 @@
 	</div>
 	<div class="h-[32rem]">
 		<nz-carousel nzAutoPlay class="nzCarousel h-full w-full">
-			<div nz-carousel-content *ngFor="let slide of introduceCarouselSlides">
+			<div nz-carousel-content *ngFor="let slide of carouselSlides">
 				<img i18n-alt src="{{ slide.imgSrc }}" alt="{{ slide.imgAlt }}" class="nzCarousel-img" />
 			</div>
 		</nz-carousel>
 	</div>
-</section>
+</section> -->

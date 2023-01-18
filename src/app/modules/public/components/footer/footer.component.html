@@ -1,0 +1,19 @@
+<footer class="footer">
+	<div class="footer-content">
+		<div class="footer-group footer-brand">
+			<p class="text-3xl">{{ hotelDetails.title }}</p>
+		</div>
+		<div class="footer-group footer-address">
+			<p class="footer-group-title">ADDRESS</p>
+			<p class="footer-group-text">{{ hotelDetails.address }}</p>
+		</div>
+		<div class="footer-group footer-address">
+			<p class="footer-group-title">CONTANTS</p>
+			<p *ngFor="let contact of hotelDetails.contacts" class="footer-group-text">{{ contact }}</p>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<p class="footer-bottom-text">Copyright © {{ currentYear }} {{ hotelDetails.title }} & <a href="https://studentisvetu.cz/">studentisvetu.cz</a> | All rights reserved</p>
+		<p class="footer-bottom-text ml-auto">Designed and created by <a href="https://studentisvetu.cz/">studentisvetu.cz</a></p>
+	</div>
+</footer>

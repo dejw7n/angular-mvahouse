@@ -1,24 +1,27 @@
 <app-header>
-	<div class="px-6 py-4 backdrop-brightness-50 lg:backdrop-brightness-100">
+	<div class="wrapper px-6 py-4">
 		<div class="flex">
 			<a href="/#">
-				<div class="flex">
+				<div class="flex gap-4">
 					<img src="./assets/images/logo.png" alt="logo" class="aspect-square h-10" />
+					<span class="my-auto text-2xl font-semibold text-body">{{ hotelDetails.title }}</span>
 				</div>
 			</a>
-			<div class="my-auto ml-auto flex hidden gap-8 sm:flex">
-				<div *ngFor="let navLink of navLinks">
-					<a href="{{ navLink.href }}">
-						<div class="h-full w-full border-b-2 border-b-primary px-1 text-primary hover:border-b-primary-hover hover:text-primary-hover">
-							<span class="peer font-semibold uppercase">{{ navLink.label }}</span>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="ml-8">
-				<app-shared-button-book>BOOK NOW</app-shared-button-book>
+			<div class="ml-auto hidden gap-8 lg:flex">
 				<app-change-language></app-change-language>
+				<app-shared-button-book [styleClass]="'bg-white'">BOOK NOW</app-shared-button-book>
 			</div>
 		</div>
 	</div>
 </app-header>
+
+<button nz-button (click)="openDrawer()">OTEVRTIR MENU</button>
+<ng-template #drawerContent>
+	<div [style.margin]="'20px 20px 0 0'" [style.text-align]="'right'" [style.cursor]="'pointer'">
+		<span (click)="close()" title="Close" class="icon icon-close text-2xl"></span>
+	</div>
+	<div [style.margin]="'20px 20px 0 20px'">
+		<div>Hello, Drawer!</div>
+		<div>Powered by template.</div>
+	</div>
+</ng-template>
