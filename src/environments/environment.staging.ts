@@ -1,5 +1,11 @@
 export const environment = {
 	production: true,
-	apiHost: "http://localhost:4200/",
-	apiKey: "devKey",
+	apiKey: "YOUR_API_KEY",
+	apiHost: "http://127.0.0.1",
+	mysql: {
+		host: "http://127.0.0.1",
+		user: "username",
+		password: "password",
+		db: "database_name",
+	},
 };
