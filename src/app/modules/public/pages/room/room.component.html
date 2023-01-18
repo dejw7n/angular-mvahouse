@@ -1,35 +1,70 @@
-<div class="wrapper-left w-full overflow-hidden">
-	<div class="flex h-[600px] w-full cursor-pointer gap-8">
+<div class="md:wrapper-left w-full overflow-hidden">
+	<div class="flex w-full cursor-pointer gap-8 md:h-[500px]">
 		<img src="./assets/images/apartments/apartment-4/1.jpg" alt="" class="aspect-video h-full object-cover" />
 		<img src="./assets/images/apartments/apartment-4/1.jpg" alt="" class="aspect-video h-full object-cover" />
 	</div>
 </div>
 <div class="wrapper mt-12">
-	<p class="text-8xl uppercase">DELUXE ROOM</p>
-	<div class="mt-6 flex text-4xl uppercase">
-		<span class="my-auto">250 €</span>
-		<span class="text-5xl">/</span>
-		<span class="my-auto">PER NIGHT</span>
-	</div>
-	<div class="mt-12 flex">
-		<div class="grid grid-cols-3 gap-x-24 gap-y-8">
-			<div *ngFor="let index of [0, 1, 2, 3, 4, 5]" class="flex gap-8">
-				<fa-icon [icon]="faWifi" class="text-2xl"></fa-icon>
-				<span class="my-auto text-xl font-semibold">Free Wifi</span>
-			</div>
+	<p class="room-title">DELUXE ROOM</p>
+	<div class="ml-1">
+		<div class="room-subtitle mt-6 flex">
+			<span class="my-auto font-mono leading-none">250 €</span>
+			<span class="text-5xl leading-none">/</span>
+			<span class="my-auto leading-none">PER NIGHT</span>
 		</div>
-		<div class="ml-auto flex">
-			<app-shared-button-book class="mt-auto">BOOK NOW</app-shared-button-book>
+		<div class="mt-12 ml-2 flex flex-col gap-8 md:flex-row">
+			<div class="grid grid-cols-2 gap-x-8 gap-y-8 lg:gap-x-24 xl:grid-cols-3">
+				<div *ngFor="let index of [0, 1, 2, 3, 4, 5]" class="flex gap-8">
+					<fa-icon [icon]="faWifi" class="text-2xl"></fa-icon>
+					<span class="my-auto text-xl font-semibold">Free Wifi</span>
+				</div>
+			</div>
+			<div class="mx-auto flex lg:ml-auto">
+				<app-search-form></app-search-form>
+			</div>
 		</div>
 	</div>
 </div>
-<div class="mt-32">
-	<p class="wrapper text-6xl uppercase leading-tight tracking-wide">DISCOVER ROOM<br />WITH FRENCH BALCONY</p>
-	<div class="mt-16 grid grid-cols-2">
-		<img src="./assets/images/apartments/apartment-4/1.jpg" alt="" class="h-[400px] w-full object-cover" />
-		<div class="py-8 px-20 text-lg">
-			<p class="">Deluxe room includes tilt-turn windows, light floor, magnifying mirror. The room also features air conditioning, TV, minibar and safe.</p>
-			<p class="mt-8">The French balcony in the room offers a unique view of Šanovský park. Spend warm evenings on it, take photos and enjoy.</p>
+<div class="room-section">
+	<p class="wrapper room-specs-title">DISCOVER ROOM<br />WITH FRENCH BALCONY</p>
+	<div class="mt-16 grid grid-cols-1 md:grid-cols-2">
+		<div class="hidden md:block">
+			<img src="./assets/images/apartments/apartment-4/1.jpg" alt="" width="16" height="9" class="room-img ratio-16x9 w-full" />
+			<div class="wrapper">
+				<img src="./assets/images/apartments/apartment-4/1.jpg" alt="" width="16" height="9" class="room-img ratio-16x9 mt-4 w-full md:mt-16" />
+			</div>
 		</div>
+		<div>
+			<p class="room-specs-description wrapper border-gray-500 py-8 md:border-t-2 md:border-r-2 md:px-20">Deluxe room includes tilt-turn windows, light floor, magnifying mirror. The room also features air conditioning, TV, minibar and safe.<br /><br />The French balcony in the room offers a unique view of Šanovský park. Spend warm evenings on it, take photos and enjoy.</p>
+			<div class="md:wrapper-left">
+				<img src="./assets/images/apartments/apartment-4/1.jpg" alt="" width="16" height="9" class="room-img ratio-16x9 w-fit md:w-full" />
+			</div>
+		</div>
+	</div>
+</div>
+<div class="room-section wrapper lg:ga-0 grid grid-cols-1 gap-8 lg:grid-cols-2">
+	<div class="lg:pr-24">
+		<p class="room-specs-title">BATHROOM OF YOUR DREAMS</p>
+		<p class="room-specs-description py-16">
+			Relax in the large bathroom after a long day exploring the corners of Lisbon. The room is equipped with a hairdryer, towels and bathrobes.<br />
+			<br />We work with the best brands and Molton Brown is one of them. It is a British fragrance and personal care brand. In 2013 Molton Brown was granted a Royal Warrant in recognition of their status as •Supplier of Toiletries" to HM The Queen.
+		</p>
+		<img src="./assets/images/apartments/apartment-4/1.jpg" alt="" width="16" height="9" class="room-img ratio-16x9 h-[250px] w-auto" />
+	</div>
+	<div class="hidden md:flex">
+		<img src="./assets/images/apartments/apartment-4/1.jpg" alt="" width="3" height="4" class="room-img ratio-3x4 ml-auto h-full w-auto" />
+	</div>
+</div>
+<div class="room-section">
+	<p class="room-specs-title wrapper">OTHER ROOMS</p>
+	<div class="mt-16 flex w-full gap-8 overflow-hidden">
+		<p-carousel class="w-full" [value]="apartments" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" [circular]="true">
+			<ng-template let-apartment pTemplate="item">
+				<div class="mr-8">
+					<img src="./assets/images/apartments/apartment-4/1.jpg" alt="" width="16" height="9" class="ratio-16x9 h-72 w-auto object-cover" />
+					<p class="mt-4 text-3xl uppercase">FAMILY APARTMENT</p>
+				</div>
+			</ng-template>
+		</p-carousel>
 	</div>
 </div>
