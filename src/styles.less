@@ -2,10 +2,16 @@
 // View all variables: https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/components/style/themes/default.less
 @primary-color: #d2ae70;
 
+//DevUI
+@import "node_modules/ng-devui/devui.min.css";
 //DevUI cancel css
 .grid {
 	letter-spacing: 0;
 	word-spacing: 0;
+}
+//ngZorro fix
+.ant-image-preview-img {
+	display: initial !important;
 }
 
 @import "./assets/less/primeng/theme.less";
@@ -28,7 +34,11 @@
 	body {
 		@apply font-lato;
 		line-height: 1 !important;
+		color: #575250;
 		background: #faf2ed;
+	}
+	a {
+		@apply font-semibold text-primary;
 	}
 }
 
@@ -71,7 +81,9 @@
 		@apply border-0 bg-secondary-hover font-normal text-white;
 	}
 }
-.wrapper {
+.wrapper,
+.footer-content,
+.intro-container {
 	@apply w-full px-4 md:px-16;
 }
 .wrapper-left {
