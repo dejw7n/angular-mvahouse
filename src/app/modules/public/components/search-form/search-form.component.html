@@ -28,9 +28,15 @@
 				<div class="sf__group-icon">
 					<fa-icon [icon]="faHandPointer"></fa-icon>
 				</div>
-				<div class="sf__group-display">{{ form.adults }} <span i18n>adults</span></div>
+				<div class="sf__group-display">
+					{{ form.adults }}
+					<span i18n>adults</span>
+				</div>
 				<div class="sf__group-display px-2"><span class="text-3xl leading-none">·</span></div>
-				<div class="sf__group-display">{{ form.childrens }} <span i18n>children</span></div>
+				<div class="sf__group-display">
+					{{ form.childrens }}
+					<span i18n>children</span>
+				</div>
 			</div>
 		</div>
 		<p-overlay [(visible)]="overlayStepperVisible" [responsive]="{ breakpoint: '640px', direction: 'bottom', contentStyleClass: 'h-20rem' }" contentStyleClass="responsive-overlay">
@@ -98,6 +104,7 @@
 		</p-overlay>
 	</div> -->
 	<div class="sf__button">
-		<button i18n nz-button nzType="primary" [nzSize]="size" class="sf__button-display">Search</button>
+		<app-shared-button-book [styleClass]="'w-full ' + btnStyleClass">{{ btnText }}</app-shared-button-book>
+		<!-- <button i18n nz-button nzType="primary" [nzSize]="size" class="sf__button-display">Search</button> -->
 	</div>
 </div>

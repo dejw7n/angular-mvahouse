@@ -8,26 +8,26 @@
 	@apply flex w-full;
 }
 .sf__group-inner {
-	@apply my-auto flex w-full border-2 border-zinc-200 py-2 px-4;
+	@apply my-auto flex w-full border-2 border-tertiary-hover py-2 px-4;
 }
 .sf__group-wrapper:hover > .sf__group-inner .sf__group-display,
 .sf__group-wrapper:hover > .sf__group-inner .sf__group-icon > fa-icon,
 .sf__group .sf__datespicker:hover > .sf__datespicker-label .sf__group-inner .sf__group-icon fa-icon,
 .sf__group .sf__datespicker:hover > .sf__datespicker-label .sf__group-inner .sf__datespicker-display-wrapper .sf__datespicker-display {
-	@apply text-secondary-hover;
+	@apply text-tertiary-hover;
 }
 .sf__group .sf__datespicker:hover > .sf__datespicker-label .sf__group-inner .sf__datespicker__divider-wrapper .sf__datespicker__divider {
-	@apply bg-secondary-hover;
+	@apply bg-tertiary-hover;
 }
 .sf__group-icon {
 	@apply flex pr-3 text-lg;
 }
 .sf__group-icon fa-icon {
-	@apply my-auto text-secondary;
+	@apply my-auto text-tertiary;
 }
 .sf__group-display,
 .sf__datespicker-display {
-	@apply my-auto w-max font-semibold text-secondary;
+	@apply my-auto w-max font-sans font-semibold text-tertiary;
 }
 .sf__group-display,
 .sf__datespicker-display,
@@ -59,7 +59,7 @@
 .sf__datespicker__divider {
 	width: 10px;
 	height: 1px;
-	@apply my-auto bg-secondary;
+	@apply my-auto bg-tertiary;
 }
 //stepper
 .sf__stepper {
@@ -90,13 +90,13 @@
 	@apply flex w-12;
 }
 .sf__stepper__factor__display {
-	@apply m-auto text-xl text-primary;
+	@apply m-auto font-mono text-xl text-tertiary;
 }
 .sf__stepper__factor__button {
-	@apply flex h-11 w-11 cursor-pointer rounded-sm border-2 border-secondary text-secondary;
+	@apply flex h-11 w-11 cursor-pointer rounded-sm border-2 border-tertiary text-tertiary;
 }
 .sf__stepper__factor__button:hover {
-	@apply border-secondary-hover text-secondary-hover;
+	@apply border-tertiary-hover text-tertiary-hover;
 }
 .sf__stepper__factor__button i {
 	@apply m-auto;

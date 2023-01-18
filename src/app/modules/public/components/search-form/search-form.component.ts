@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { faCalendar, faMinusSquare, faPlusSquare } from "@fortawesome/free-regular-svg-icons";
 import { faHandPointer } from "@fortawesome/free-regular-svg-icons";
 import { NzButtonSize } from "ng-zorro-antd/button";
@@ -11,6 +11,9 @@ declare var datesPickerJs: any;
 	styleUrls: ["./search-form.component.less"],
 })
 export class SearchFormComponent {
+	@Input() btnText: string = "BOOK NOW";
+	@Input() btnStyleClass: string = "";
+
 	size: NzButtonSize = "large";
 
 	faHandPointer = faHandPointer;
