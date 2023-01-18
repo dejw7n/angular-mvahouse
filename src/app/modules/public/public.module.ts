@@ -16,9 +16,15 @@ import { FormsModule } from "@angular/forms";
 import { SearchResultsComponent } from "./pages/search-results/search-results.component";
 import { SliderModule } from "primeng/slider";
 import { RoomComponent } from "./pages/room/room.component";
+import { CarouselModule } from "primeng/carousel";
+import { BookComponent } from "./pages/book/book.component";
+import { DrawerModule } from "ng-devui/drawer";
+import { NzImageModule } from "ng-zorro-antd/image";
+import { FooterComponent } from './components/footer/footer.component';
+import { RoomCardComponent } from './components/room-card/room-card.component';
 
 @NgModule({
-	declarations: [PublicComponent, HomeComponent, HeaderComponent, SearchFormComponent, SearchResultsComponent, RoomComponent],
-	imports: [PublicRoutingModule, CoreModule, SharedModule, SliderModule, FormsModule, NzCarouselModule, OverlayModule, ToggleButtonModule, NzButtonModule, FontAwesomeModule, CommonModule],
+	declarations: [PublicComponent, HomeComponent, HeaderComponent, SearchFormComponent, SearchResultsComponent, RoomComponent, BookComponent, FooterComponent, RoomCardComponent],
+	imports: [NzImageModule, PublicRoutingModule, CoreModule, DrawerModule, SharedModule, CarouselModule, SliderModule, FormsModule, NzCarouselModule, OverlayModule, ToggleButtonModule, NzButtonModule, FontAwesomeModule, CommonModule],
 })
 export class PublicModule {}
