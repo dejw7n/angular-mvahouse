@@ -5,7 +5,7 @@ import { ChangeLanguageComponent } from "./components/change-language/change-lan
 import { FormsModule } from "@angular/forms";
 import { DropdownModule } from "primeng/dropdown";
 import { NzButtonModule } from "ng-zorro-antd/button";
-import { SharedButtonBookComponent } from "./components/shared-button-book/shared-button-book.component";
+import { SharedButtonBookComponent } from "./buttons/shared-button-book/shared-button-book.component";
 
 @NgModule({
 	declarations: [HeaderComponent, ChangeLanguageComponent, SharedButtonBookComponent],
